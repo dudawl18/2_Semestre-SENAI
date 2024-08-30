@@ -1,3 +1,14 @@
 .Cabecalho-container{
-  background-color: OliveDrab;
+  background-color:var(--cor-1);
+  color: var(--cor-5);
+}
+
+.Cabecalho-container{
+
+  width: fit-content;
+  border-radius: 5%;
+}
+
+.Cabecalho-container h1{
+    text-align: center;
 }
