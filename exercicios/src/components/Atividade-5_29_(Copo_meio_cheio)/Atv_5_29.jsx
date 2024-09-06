@@ -22,7 +22,7 @@ function Atv_5_29() {
     
   return (
     <div className="Copo-container">
-      <h2>Copo meio cheio</h2>
+      <h2>Copo meio cheio. Positivo, negativo ou nulo</h2>
       <button onClick={processarNumero}>Processar</button>
       <div>
        {resultado}
