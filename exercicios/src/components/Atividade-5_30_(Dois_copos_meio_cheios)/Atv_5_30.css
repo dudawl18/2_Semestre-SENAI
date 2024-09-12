@@ -1,6 +1,9 @@
 .Doiscopo-container{
-    margin-top: 2%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
+    margin-top: 2%;
     border: 1px solid black;
     padding: 20px;
     border-radius: 10px; 
