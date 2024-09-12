@@ -1,0 +1,22 @@
+.Home-container{
+    margin: auto;
+    margin-top: 16%;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+button{
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: seashell;
+}
+
+button:hover{
+    background-color: rgb(224, 217, 211);
+}
+
+.titulosFont{
+    color: darkolivegreen;
+}

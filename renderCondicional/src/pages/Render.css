@@ -1,0 +1,16 @@
+.paginaRender-container{
+    margin: auto;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.render-container{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #000;
+}
