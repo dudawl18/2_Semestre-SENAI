@@ -1,0 +1,11 @@
+.Uber-container{
+    width: fit-content;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
