@@ -28,7 +28,9 @@ function Atv_5_30() {
   return (
     <div className='Doiscopo-container'>
        <h2>Dois copos meio cheios. Positivo e par</h2>
+       <div className="botao-container">
       <button onClick={realizarNumero}>Realizar</button>
+      </div>
       <div>
        {resultado}
       </div>

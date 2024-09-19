@@ -23,8 +23,10 @@ function Atv_5_29() {
   return (
     <div className="Copo-container">
       <h2>Copo meio cheio. Positivo, negativo ou nulo</h2>
-      <button onClick={processarNumero}>Processar</button>
-      <div>
+      <div className="botao-container">
+       <button onClick={processarNumero}>Processar</button>
+      </div>  
+    <div>
        {resultado}
       </div>
     </div>

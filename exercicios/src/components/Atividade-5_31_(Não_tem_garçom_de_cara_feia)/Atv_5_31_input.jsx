@@ -7,8 +7,11 @@
 import { useState } from "react"
 import "./Atv_5_31.css"
 
-function Atv_5_31() {
-  const [resultado, setResultado] = useState()
+function Atv_5_31_input() {
+  const [salarioInput, setSalarioInput] = useState('')
+  const [emprestimoInput, setEmprestimoInput] = useState('')
+  const [prestacoesInput, setPrestacoesInput] = useState('')
+  const [stateRelatorio, setStateRelatorio] = useState()
 
   function informarCalculo() {
     let salario = Number(prompt("Digite seu salário: "))
@@ -33,16 +36,19 @@ function Atv_5_31() {
 
   return (
     <div className="Garcom-container">
-      <h2>Linha de crédito para funcionários</h2>
+      <h2>Linha de crédito para funcionários (inputs)</h2>
+      <label htmlFor="inpSalario">Salário</label>
+      <input type="text" id="inpSalario"
+        value={salarioInput}
+        onChange={ (event) => setSalarioInput(event.target.value) } />
+
       <div className="botao-container">
-        <button onClick={informarCalculo}>Informar</button>
+      <button className="botao-container" onClick={informarCalculo}>Informar</button>
       </div>
 
-        <div>
-          <br /> {resultado}
-        </div>
+      
     </div>
-      )
+  )
 }
 
-      export default Atv_5_31
+export default Atv_5_31_input

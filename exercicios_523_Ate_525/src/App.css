@@ -20,12 +20,12 @@ body{
 }
 
 button{
-  background-color: rgb(241, 240, 255);
+  background-color: rgb(223, 222, 236);
   margin-top: 4%;
-  height: 30px;
-  width: 70px;
+  height: 35px;
+  width: 80px;
   font-size: 15px;
-  border-color: rgb(97, 97, 126);
+  border: none;
   border-radius: 5px;
 }
 

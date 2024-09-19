@@ -1,0 +1,23 @@
+body{
+    background-color: AliceBlue;
+}
+
+.botao-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button{
+    background-color: rgb(226, 225, 240);
+    margin-top: 6%;
+    height: 35px;
+    width: 90px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover{
+    background-color: rgb(205, 205, 224);
+  }
