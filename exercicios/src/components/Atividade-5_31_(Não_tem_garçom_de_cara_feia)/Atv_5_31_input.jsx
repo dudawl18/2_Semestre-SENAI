@@ -6,6 +6,7 @@
 
 import { useState } from "react"
 import "./Atv_5_31.css"
+import RelatorioEmprestimo from './RelatorioEmprestimo'
 
 function Atv_5_31_input() {
   const [salarioInput, setSalarioInput] = useState('')
@@ -14,39 +15,60 @@ function Atv_5_31_input() {
   const [stateRelatorio, setStateRelatorio] = useState()
 
   function informarCalculo() {
-    let salario = Number(prompt("Digite seu salário: "))
-    let valorEmprestimo = Number(prompt("Digite o valor de empréstimo desejado: "))
-    let numeroPrestacoes = Number(prompt("Digite o número de prestações: "))
-    let valorPrestacao = valorEmprestimo / numeroPrestacoes
+    let porcenSalario = (salarioInput * 30) / 100
+    let valorPrestacao = emprestimoInput / prestacoesInput
 
-    let porcenSalario = (salario * 30) / 100
 
-    if (salario <= 0 || valorEmprestimo <= 0 || numeroPrestacoes <= 0) {
-      setResultado("O empréstimo não pode ser feito")
 
-    } else if (porcenSalario < valorPrestacao) {
-      setResultado("Você não pode realizar o empréstimo")
+    if (valorPrestacao < porcenSalario) {
+      let infosRelatorio = {
+        situacao: "aprovado",
+        maxPrestacao: porcenSalario,
+        prestacao: valorPrestacao,
+        emprestimo: emprestimoInput,
+        prestacoes: prestacoesInput
+      }
+      setStateRelatorio(infosRelatorio)
 
-    } else if (porcenSalario >= valorPrestacao) {
-      setResultado("O empréstimo pode ser realizado")
-
+    } else {
+      let infosRelatorio = {
+        situacao: "reprovado",
+        maxPrestacao: porcenSalario,
+        prestacao: valorPrestacao,
+        emprestimo: emprestimoInput,
+        prestacoes: prestacoesInput
+      }
+      setStateRelatorio(infosRelatorio)
     }
-
   }
 
   return (
     <div className="Garcom-container">
       <h2>Linha de crédito para funcionários (inputs)</h2>
-      <label htmlFor="inpSalario">Salário</label>
-      <input type="text" id="inpSalario"
-        value={salarioInput}
-        onChange={ (event) => setSalarioInput(event.target.value) } />
+      <div className="campoInformacoes-container">
+        <label htmlFor="inpSalario">Salário</label>
+        <input type="text" id="inpSalario"
+          value={salarioInput}
+          onChange={(event) => setSalarioInput(event.target.value)} />
 
+        <label htmlFor="inpEmprestimo">Empréstimo</label>
+        <input type="text" id="inpEmprestimo"
+          value={emprestimoInput}
+          onChange={(event) => setEmprestimoInput(event.target.value)} />
+
+        <label htmlFor="inpPrestacoes">Quantidade de prestações</label>
+        <input type="text" id="inpPrestacoes"
+          value={prestacoesInput}
+          onChange={(event) => setPrestacoesInput(event.target.value)} />
+      </div>
       <div className="botao-container">
-      <button className="botao-container" onClick={informarCalculo}>Informar</button>
+        <button className="botao-container" onClick={informarCalculo}>Informar</button>
       </div>
 
-      
+      {stateRelatorio &&
+        <RelatorioEmprestimo infos={stateRelatorio} />
+      }
+
     </div>
   )
 }
