@@ -27,6 +27,8 @@ function Atv_524() {
 
         } else if (mediaNotas >= 0 && mediaNotas < 4) {
             conceitoNota = 'E'
+        }else{
+            alert('Nota inválida! Digite uma nota existente')
         }
 
         setNota1(notaUm)
