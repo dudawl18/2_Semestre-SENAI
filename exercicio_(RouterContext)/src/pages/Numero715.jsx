@@ -21,10 +21,10 @@ function Numero715() {
         } else if (numero === -1) {
             setControle(true)
         } else {
-            alert('É necessário que um número inteiro positivo seja digitado')
+            alert('É necessário que um número inteiro positivo seja digitado!!')
         }
 
-        setInputNumero('')
+        setInputNumero('') //Isso vai limpar os elementos digitados no input
     }
 
     return (
